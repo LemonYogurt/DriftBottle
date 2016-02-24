@@ -1,0 +1,11 @@
+//- 查看我的瓶子(当点击我的瓶子的时候，会从mongo中查询出与我相关的瓶子的列表，然后点击列表中的内容，会弹出该模态框显示具体的内容)
+#viewBottleModal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title 查看瓶子
+                    button.close(type="button", data-dismiss="modal") 关闭
+            .modal-body
+                #viewBottleRows.row
+            .modal-footer
+                button.btn.btn-default(type="button", data-dismiss="modal") 确定

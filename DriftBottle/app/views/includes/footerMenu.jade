@@ -1,0 +1,10 @@
+.container(style="width:1007px;height:419px;position:relative;overflow:hidden;")
+   div(style="width:234px;height:100%;background:url('/images/repeat.jpg') repeat-x;float:left;")
+   div(style="width:743px;height:100%;float:left;background:url('/images/bg01.jpg');")
+   div(style="width:743px;height:100%;position:absolute;top:102px;left:14;background:url('/images/bg02.png');")
+   .row(style="width:1007px;position:absolute;left:0;bottom:0;padding-left:40px;")
+      a(href="javascript:void(0);", onclick="throwBottle()", style="background:url('/images/icon.png') 0 -93px;width:122px;height:46px;display:inline-block;float:left;margin-right:34px;")
+         span#throwTimes.badge(style="margin-left:38px;") #{user.username? (6 - user.throwTimes): 0}
+      a(href="javascript:void(0);", onclick="pick()", style="background:url('/images/icon.png') 0 -158px;width:127px;height:46px;display:inline-block;float:left;margin-right:34px;")
+         span#pickTimes.badge(style="margin-left:34px;") #{user.username? (3 - user.pickTimes): 0}
+      a(href="javascript:void(0);", onclick="myBottle()", style="background:url('/images/icon.png') 0 -28px;width:155px;height:46px;display:inline-block;float:left;margin-right:34px;")

@@ -1,0 +1,35 @@
+//- 捞瓶子模态窗
+#pickModal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title 你捞到了一个漂流瓶
+                    button.close(type="button",data-dismiss="modal") 关闭
+            .modal-body
+                .container
+                    .row
+                        .form-group
+                            label.col-sm-2.control-label 来自于
+                            .col-sm-4
+                                input#owner.form-control(type="hidden",name="owner",value="")
+                                span#showOwner
+                    .row
+                        .form-group
+                            label.col-sm-2.control-label 时间
+                            .col-sm-4
+                                input#time.form-control(type="hidden",name="time",value="")
+                                span#showTime
+                    .row
+                        .form-group
+                            label.col-sm-2.control-label(for="bottle_content") 内容
+                            .col-sm-4
+                                input#bottle_content.form-control(type="hidden",name="bottle_content",value="")
+                                span#showBottle_content
+                    .row
+                        .form-group
+                            label.col-sm-2.control-label(for="response") 回应
+                            .col-sm-4
+                                input#response.form-control(type="text", name="response", value="")
+            .modal-footer
+                button.btn.btn-default(type="button", onclick="throwback()") 扔回去
+                button.btn.btn-default(type="button", onclick="response()") 回应

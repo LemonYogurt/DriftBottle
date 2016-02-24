@@ -1,0 +1,25 @@
+//- 菜单页面：包含注册和用户信息
+//- 头部的登陆和注册
+.row(style="position:absolute;left:0;top:5px;width:1360px;")
+    .col-md-offset-8.col-md-4.text-right
+        - var infoStyle = user.username ? 'block' : 'none';
+        - var regStyle = user.username ? 'none' : 'block';
+        #regInfo(style="display:#{infoStyle}")
+            img#myAvatar(src=user.avatar, width="50", height="50")
+            span#myUsername #{user.username}
+            a(href="javascript:void(0);",onclick="logout()") 退出
+        #regBtn(style="display:#{regStyle}")
+            a(href="javascript:void(0);",onclick="reg()") 注册用户
+//- 底部的菜单，关于瓶子的操作
+.row(style="position:absolute;left:0;bottom:0;width:1360px;")
+    .col-md-4.text-center
+        img(src="/images/bottle.png")
+        a(href="javascript:void(0);", onclick="throwBottle()") 扔一个
+            span#throwTimes.badge #{6 - user.throwTimes}
+    .col-md-4.text-center
+        img(src="/images/net.png")
+        a(href="javascript:void(0);", onclick="pick()") 捞一个
+            span#pickTimes.badge #{3 - user.pickTimes}
+    .col-md-4.text-center
+        img(src="/images/my.png")
+        a(href="javascript:void(0);", onclick="myBottle()") 我的瓶子

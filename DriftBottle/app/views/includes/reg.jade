@@ -1,0 +1,31 @@
+//- 注册页面（模态窗）
+#regModal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title 注册
+                    //- data-dismiss用于关闭模态框
+                    button.close(type="button", data-dismiss="modal") &times;
+            .modal-body
+                .row
+                    form#regForm.form-horizontal(method="post", action="")
+                        .form-group
+                            label.col-sm-2.control-label(for="username") 昵称
+                            .col-sm-8
+                                input#username.form-control(type="text", name="username", value="")
+                        .form-group
+                            label.col-sm-2.control-label(for="password") 密码
+                            .col-sm-8
+                                input#password.form-control(type="password", name="password", value="")
+                        .form-group
+                            label.col-sm-2.control-label(for="repassword") 确认密码
+                            .col-sm-8
+                                input#repassword.form-control(type="password", name="repassword", value="")
+                        .form-group
+                            label.col-sm-2.control-label(for="avatar") 头像
+                            .col-sm-5
+                                input#avatar.form-control(type="file", name="avatar")
+                            .col-sm-5
+                                img(src="",id="avatarPreview",width="100" height="100" style="margin:0 auto;display:none;")
+            .modal-footer
+                button.btn.btn-default(type="button", data-dismiss="modal") 注册

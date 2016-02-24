@@ -1,0 +1,21 @@
+//- 登录页面（模态窗）
+#loginModal.modal.fade
+   .modal-dialog
+      .modal-content
+         .modal-header
+            h4.modal-title 登录
+               //- data-dismiss用于关闭模态框
+               button.close(type="button", data-dismiss="modal") &times;
+         .modal-body
+            .row
+               form.form-horizontal(method="post", action="")
+                  .form-group
+                     label.col-sm-2.control-label(for="user") 昵称
+                     .col-sm-8
+                        input#user.form-control(type="text", name="user", value="")
+                  .form-group
+                     label.col-sm-2.control-label(for="pwd") 密码
+                     .col-sm-8
+                        input#pwd.form-control(type="password", name="pwd", value="")
+         .modal-footer
+            button.btn.btn-default(type="button", data-dismiss="modal") 登录

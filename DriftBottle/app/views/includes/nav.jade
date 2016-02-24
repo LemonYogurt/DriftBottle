@@ -1,0 +1,18 @@
+nav.navbar.navbar-default.navbar-static-top(style="opacity:0.8;")
+   .container-fluid
+      .navbar-header
+         a(href="javascript:void(0);").navbar-brand
+            img(src="/images/Logo.png",width="93",height="26")
+      - var regStyle = user.username ? 'none' : 'block';
+      - var infoStyle = user.username ? 'block' : 'none';
+      ul#regInfo.nav.navbar-nav.navbar-right(style="display:#{regStyle}")
+         li#loginBtn(data-toggle="tab")
+            a(href="javascript:void(0);", onclick="login()") 登录
+         li#regBtn(data-toggle="tab")
+            a(href="javascript:void(0);", onclick="reg()") 注册
+      ul#userInfo.nav.navbar-nav.navbar-right(style="display:#{infoStyle}")
+         li#userInfoBtn(data-toggle="tab")
+            img#myAvatar(src=user.avatar, width="50", height="50")
+            span#myUsername #{user.username}
+         li#logoutBtn(data-toggle="tab")
+            a(href="javascript:void(0);", onclick="logout()") 退出
