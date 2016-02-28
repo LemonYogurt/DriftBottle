@@ -121,7 +121,6 @@ $('#regModal').on('hide.bs.modal', function () {
 		formData.append('username', username);
 		formData.append('password', password);
 		formData.append('avatar', $('#avatar')[0].files[0]);
-		console.log('呵呵');
 		$.ajax({
 			url: '/users/reg',
 			type: 'POST',
